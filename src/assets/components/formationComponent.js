@@ -100,7 +100,7 @@ export default function FormationComponent() {
                     <div className="education__content">
                         <div>
                             <h3 className="education__year">
-                                Outubro 2020
+                                2020
                             </h3>
                             <span className="education__university">
                                 Udemy
@@ -122,8 +122,7 @@ export default function FormationComponent() {
 
                     <div className="education__content">
                         <div>
-                            <h3 className="education__year">
-                                Dezembro 2022
+                            <h3 className="education__year">2022
                             </h3>
                             <span className="education__university">
                                 Faculdade de Tecnologia de São Paulo
@@ -137,9 +136,9 @@ export default function FormationComponent() {
 
                         <div>
                             <h3 className="education__race">
-                                Análise e Desenvolvimento de Sistemas
+                                Curso Superior
                             </h3>
-                            <span className="education__specialty">Desenvolvimento de Software</span>
+                            <span className="education__specialty">Análise e Desenvolvimento de Sistemas</span>
                         </div>
                     </div>
                 </div>
