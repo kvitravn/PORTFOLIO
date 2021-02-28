@@ -1,18 +1,18 @@
-import React, {useEffect} from 'react';
-import {BrowserRouter} from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
-import NavMenuScripts from "../js/navMenuScripts";
+import NavMenuScripts from '../js/navMenuScripts'
 
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Header = styled.div`
   .l-header {
-    width: 100%;
+    width: 100vw;
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(first-color-light);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(231, 230, 232, 0.8);
+    box-shadow: 0 2px 4px rgba(231, 230, 232, 0.8);
     position: fixed;
   }
 `
@@ -72,6 +72,7 @@ const Nav = styled.nav`
     font-size: 1.8rem;
     cursor: pointer;
     transition: 0.3s;
+    background-color: 0 2px 4px rgba(231, 230, 232, 0.8) !important;
 
     &:hover {
       color: var(--text-color);
@@ -84,72 +85,76 @@ const Nav = styled.nav`
 `
 
 export default function HeaderComponent() {
+  useEffect(() => {
+    const script = document.createElement('script')
 
-    useEffect(() => {
-        const script = document.createElement('script')
-
-        script.src = NavMenuScripts('nav-menu', 'nav-toggle', 'nav-close', '.nav__link')
-        script.async = true
-
-        document.body.appendChild(script)
-
-        return () => {
-            document.body.removeChild(script)
-        }
-    }, [])
-
-    return (
-        <>
-            <BrowserRouter>
-                <Header>
-                    <div className="l-header" onLoad={useEffect}>
-                    <Nav className="nav bd-grid">
-                        <div className="nav__toggle" id="nav-toggle">
-                            <i className='bx bx-menu'></i>
-                        </div>
-
-                        <div className="nav__menu" id="nav-menu">
-                            <div className="nav__close" id="nav-close">
-                                <i className='bx bx-x'></i>
-                            </div>
-
-                            <ul className="nav__list">
-                                <li className="nav__item">
-                                    <a href="#home" className="nav__link">
-                                        Início
-                                    </a>
-                                </li>
-                                <li className="nav__item">
-                                    <a href="#about" className="nav__link">
-                                        Quem sou eu
-                                    </a>
-                                </li>
-                                <li className="nav__item">
-                                    <a href="#skills" className="nav__link">
-                                        Stack
-                                    </a>
-                                </li>
-                                <li className="nav__item">
-                                    <a href="#education" className="nav__link">
-                                        Formação
-                                    </a>
-                                </li>
-                                <li className="nav__item">
-                                    <a href="#works" className="nav__link">
-                                        Projetos
-                                    </a>
-                                </li>
-                                <li className="nav__item">
-                                    <a href="#contact" className="nav__link">
-                                        Contato
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </Nav>
-                    </div>
-                </Header>
-            </BrowserRouter>
-        </>
+    script.src = NavMenuScripts(
+      'nav-menu',
+      'nav-toggle',
+      'nav-close',
+      '.nav__link'
     )
+    script.async = true
+
+    document.body.appendChild(script)
+
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
+
+  return (
+    <>
+      <BrowserRouter>
+        <Header>
+          <div className='l-header' onLoad={useEffect}>
+            <Nav className='nav bd-grid'>
+              <div className='nav__toggle' id='nav-toggle'>
+                <i className='bx bx-menu'></i>
+              </div>
+
+              <div className='nav__menu' id='nav-menu'>
+                <div className='nav__close' id='nav-close'>
+                  <i className='bx bx-x'></i>
+                </div>
+
+                <ul className='nav__list'>
+                  <li className='nav__item'>
+                    <a href='#home' className='nav__link'>
+                      Início
+                    </a>
+                  </li>
+                  <li className='nav__item'>
+                    <a href='#about' className='nav__link'>
+                      Quem sou eu
+                    </a>
+                  </li>
+                  <li className='nav__item'>
+                    <a href='#skills' className='nav__link'>
+                      Stack
+                    </a>
+                  </li>
+                  <li className='nav__item'>
+                    <a href='#education' className='nav__link'>
+                      Formação
+                    </a>
+                  </li>
+                  <li className='nav__item'>
+                    <a href='#works' className='nav__link'>
+                      Projetos
+                    </a>
+                  </li>
+                  <li className='nav__item'>
+                    <a href='#contact' className='nav__link'>
+                      Contato
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </Nav>
+          </div>
+        </Header>
+      </BrowserRouter>
+    </>
+  )
 }

@@ -1,18 +1,18 @@
-import React, {useEffect} from 'react'
-import {BrowserRouter} from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
-import styled, {createGlobalStyle} from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
-import HeaderComponent from "./assets/components/headerComponent";
-import HomeComponent from "./assets/components/homeComponent";
-import SkillComponent from "./assets/components/skillsComponent";
-import FormationComponent from "./assets/components/formationComponent";
+import HeaderComponent from './assets/components/headerComponent'
+import HomeComponent from './assets/components/homeComponent'
+import SkillComponent from './assets/components/skillsComponent'
+import FormationComponent from './assets/components/formationComponent'
+import AboutComponent from './assets/components/aboutComponent'
+import ProjectsComponent from './assets/components/projectsComponent'
+import ContactComponent from './assets/components/contactComponent'
+import FooterComponent from './assets/components/footerComponent'
 
-import AboutComponent from "./assets/components/aboutComponent";
-import ToTopButton from "./assets/js/toTopButton";
-import ProjectsComponent from "./assets/components/projectsComponent";
-import ContactComponent from "./assets/components/contactComponent";
-import FooterComponent from "./assets/components/footerComponent";
+import ScrollScripts from './assets/js/scrollReveal'
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -115,7 +115,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .nav__menu {
-      width: 25% !important;
+      width: var(--nav-width) !important;
     }
     
     .about__container, .skills__container, .works__container, .contact__container, .contact__inputs {
@@ -165,7 +165,7 @@ const GlobalStyle = createGlobalStyle`
   @media screen and (min-width: 1024px){
     body {
       margin: 0 !important;
-      padding-left: 25% !important;
+      padding-left: var(--nav-width) !important;
       align-items: center;
     }
     
@@ -185,6 +185,10 @@ const GlobalStyle = createGlobalStyle`
       height: 100vh !important;
     }
     
+    #about, #education, #footer {
+      margin: 0 1rem;
+    }
+
     .section {
       padding: 3rem 0 2rem !important;
     }
@@ -214,62 +218,43 @@ const Section = styled.div`
     color: var(--first-color-dark);
     text-align: center;
     font-weight: var(--font-bold);
-    margin-bottom: .25rem;
-  }
-`
-
-const Button = styled.button`
-  display: none;
-  background-color: transparent;
-  position: fixed;
-  bottom: var(--mb-1);
-  cursor: pointer;
-  color: var(--text-color);
-  z-index: var(--z-fixed);
-  border: none;
-  font-size: 1.8rem;
-  transition: 0.3s;
-
-  &:hover {
-    color: var(--first-color-light);
+    margin-bottom: 0.25rem;
   }
 `
 
 const toTop = () => {
-    document.documentElement.scrollTop = 0;
+  document.documentElement.scrollTop = 0
 }
 
 export default function App() {
+  useEffect(() => {
+    const script = document.createElement('script')
 
-    useEffect(() => {
-        const script = document.createElement('script')
+    script.src = ScrollScripts('button-top')
+    script.async = true
 
-        script.src = ToTopButton('button-top')
-        script.async = true
+    document.body.appendChild(script)
 
-        document.body.appendChild(script)
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
 
-        return () => {
-            document.body.removeChild(script)
-        }
-    }, [])
-
-    return (
-        <>
-            <BrowserRouter>
-                <HeaderComponent/>
-                <Section>
-                    <HomeComponent/>
-                    <AboutComponent/>
-                    <SkillComponent/>
-                    <FormationComponent/>
-                    <ProjectsComponent/>
-                    <ContactComponent/>
-                    <FooterComponent/>
-                </Section>
-                <Button onClick={toTop} className='bx bx-chevron-up-circle' id="button-top"/>
-                <GlobalStyle/>
-            </BrowserRouter>
-        </>
-    )
+  return (
+    <>
+      <BrowserRouter>
+        <HeaderComponent />
+        <Section>
+          <HomeComponent />
+          <AboutComponent />
+          <SkillComponent />
+          <FormationComponent />
+          <ProjectsComponent />
+          <ContactComponent />
+          <FooterComponent />
+        </Section>
+        <GlobalStyle />
+      </BrowserRouter>
+    </>
+  )
 }

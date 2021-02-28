@@ -3,6 +3,18 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Formation = styled.section`
+  background-color: var(--first-color);
+  border-radius: 0.5rem;
+  color: var(--first-color-light) !important;
+
+  .section-title {
+    color: var(--first-color-light) !important;
+  }
+
+  .section-subtitle {
+    color: var(--first-color-darken) !important;
+  }
+
   .education__container {
     row-gap: 2rem;
   }
@@ -43,7 +55,7 @@ const Formation = styled.section`
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-color: var(--first-color);
+    background-color: var(--first-color-light);
     border-radius: 50%;
   }
 
@@ -53,7 +65,7 @@ const Formation = styled.section`
     transform: translate(-4px, -4px);
     width: 20px;
     height: 20px;
-    border: 1px solid var(--first-color);
+    border: 1px solid var(--first-color-light);
     border-radius: 50%;
   }
 
@@ -61,7 +73,7 @@ const Formation = styled.section`
     display: block;
     height: 90%;
     width: 2px;
-    background-color: var(--first-color);
+    background-color: var(--first-color-light);
     transform: translate(5px, 4px);
   }
 `
