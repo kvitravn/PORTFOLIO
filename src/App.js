@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import React, {useEffect} from 'react'
+import {BrowserRouter} from 'react-router-dom'
 
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, {createGlobalStyle} from 'styled-components'
 
 import HeaderComponent from './assets/components/headerComponent'
 import HomeComponent from './assets/components/homeComponent'
@@ -223,38 +223,38 @@ const Section = styled.div`
 `
 
 const toTop = () => {
-  document.documentElement.scrollTop = 0
+    document.documentElement.scrollTop = 0
 }
 
 export default function App() {
-  useEffect(() => {
-    const script = document.createElement('script')
+    useEffect(() => {
+        const script = document.createElement('script')
 
-    script.src = ScrollScripts('button-top')
-    script.async = true
+        script.src = ScrollScripts('button-top')
+        script.async = true
 
-    document.body.appendChild(script)
+        document.body.appendChild(script)
 
-    return () => {
-      document.body.removeChild(script)
-    }
-  }, [])
+        return () => {
+            document.body.removeChild(script)
+        }
+    }, [])
 
-  return (
-    <>
-      <BrowserRouter>
-        <HeaderComponent />
-        <Section>
-          <HomeComponent />
-          <AboutComponent />
-          <SkillComponent />
-          <FormationComponent />
-          <ProjectsComponent />
-          <ContactComponent />
-          <FooterComponent />
-        </Section>
-        <GlobalStyle />
-      </BrowserRouter>
-    </>
-  )
+    return (
+        <>
+            <BrowserRouter>
+                <HeaderComponent/>
+                <Section>
+                    <HomeComponent/>
+                    <AboutComponent/>
+                    <SkillComponent/>
+                    <FormationComponent/>
+                    <ProjectsComponent/>
+                    <ContactComponent/>
+                    <FooterComponent/>
+                </Section>
+                <GlobalStyle/>
+            </BrowserRouter>
+        </>
+    )
 }

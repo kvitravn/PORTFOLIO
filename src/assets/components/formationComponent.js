@@ -79,71 +79,71 @@ const Formation = styled.section`
 `
 
 export default function FormationComponent() {
-  return (
-    <>
-      <Formation className='education section' id='education'>
-        <h2 className='section-title'>Formação</h2>
-        <span className='section-subtitle'>Meus estudos</span>
+    return (
+        <>
+            <Formation className='education section' id='education'>
+                <h2 className='section-title'>Formação</h2>
+                <span className='section-subtitle'>Meus estudos</span>
 
-        <div className='education__container bd-grid'>
-          <div className='education__content'>
-            <div>
-              <h3 className='education__year'>2020</h3>
-              <span className='education__university'>
+                <div className='education__container bd-grid'>
+                    <div className='education__content'>
+                        <div>
+                            <h3 className='education__year'>2020</h3>
+                            <span className='education__university'>
                 University of Virginia
               </span>
-            </div>
+                        </div>
 
-            <div className='education__time'>
-              <span className='education__rounder' />
-              <span className='education__line' />
-            </div>
+                        <div className='education__time'>
+                            <span className='education__rounder'/>
+                            <span className='education__line'/>
+                        </div>
 
-            <div>
-              <h3 className='education__race'>Agile Meets Design Thinking</h3>
-              <span className='education__specialty'>Metodologias Ágeis</span>
-            </div>
-          </div>
+                        <div>
+                            <h3 className='education__race'>Agile Meets Design Thinking</h3>
+                            <span className='education__specialty'>Metodologias Ágeis</span>
+                        </div>
+                    </div>
 
-          <div className='education__content'>
-            <div>
-              <h3 className='education__year'>2020</h3>
-              <span className='education__university'>Udemy</span>
-            </div>
+                    <div className='education__content'>
+                        <div>
+                            <h3 className='education__year'>2020</h3>
+                            <span className='education__university'>Udemy</span>
+                        </div>
 
-            <div className='education__time'>
-              <span className='education__rounder' />
-              <span className='education__line' />
-            </div>
+                        <div className='education__time'>
+                            <span className='education__rounder'/>
+                            <span className='education__line'/>
+                        </div>
 
-            <div>
-              <h3 className='education__race'>SQL Bootcamp</h3>
-              <span className='education__specialty'>Banco de Dados</span>
-            </div>
-          </div>
+                        <div>
+                            <h3 className='education__race'>SQL Bootcamp</h3>
+                            <span className='education__specialty'>Banco de Dados</span>
+                        </div>
+                    </div>
 
-          <div className='education__content'>
-            <div>
-              <h3 className='education__year'>2022</h3>
-              <span className='education__university'>
+                    <div className='education__content'>
+                        <div>
+                            <h3 className='education__year'>2022</h3>
+                            <span className='education__university'>
                 Faculdade de Tecnologia de São Paulo
               </span>
-            </div>
+                        </div>
 
-            <div className='education__time'>
-              <span className='education__rounder' />
-              <span className='education__line' />
-            </div>
+                        <div className='education__time'>
+                            <span className='education__rounder'/>
+                            <span className='education__line'/>
+                        </div>
 
-            <div>
-              <h3 className='education__race'>Curso Superior</h3>
-              <span className='education__specialty'>
+                        <div>
+                            <h3 className='education__race'>Curso Superior</h3>
+                            <span className='education__specialty'>
                 Análise e Desenvolvimento de Sistemas
               </span>
-            </div>
-          </div>
-        </div>
-      </Formation>
-    </>
-  )
+                        </div>
+                    </div>
+                </div>
+            </Formation>
+        </>
+    )
 }

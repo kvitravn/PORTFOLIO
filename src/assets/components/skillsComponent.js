@@ -66,68 +66,68 @@ const Skill = styled.section`
 `
 
 export default function SkillComponent() {
-  return (
-    <>
-      <Skill className='skills section' id='skills'>
-        <h2 className='section-title'>Stack</h2>
-        <span className='section-subtitle'>Tecnologias que eu trabalho</span>
+    return (
+        <>
+            <Skill className='skills section' id='skills'>
+                <h2 className='section-title'>Stack</h2>
+                <span className='section-subtitle'>Tecnologias que eu trabalho</span>
 
-        <div className='skills__container bd-grid'>
-          <div className='skills__content'>
-            <h3 className='skills__subtitle'>Frontend</h3>
+                <div className='skills__container bd-grid'>
+                    <div className='skills__content'>
+                        <h3 className='skills__subtitle'>Frontend</h3>
 
-            <div className='skills__data'>
-              <span className='skills__name'>Javascript/Typescript</span>
-              <span className='skills__number'>90%</span>
-              <span className='skills__bar skills__js' />
-            </div>
-            <div className='skills__data'>
+                        <div className='skills__data'>
+                            <span className='skills__name'>Javascript/Typescript</span>
+                            <span className='skills__number'>90%</span>
+                            <span className='skills__bar skills__js'/>
+                        </div>
+                        <div className='skills__data'>
               <span className='skills__name'>
                 Style Frameworks (Styled Components, SCSS, SASS...)
               </span>
-              <span className='skills__number'>80%</span>
-              <span className='skills__bar skills__styles' />
-            </div>
-            <div className='skills__data'>
-              <span className='skills__name'>React</span>
-              <span className='skills__number'>70%</span>
-              <span className='skills__bar skills__react' />
-            </div>
-            <div className='skills__data'>
-              <span className='skills__name'>Angular</span>
-              <span className='skills__number'>80%</span>
-              <span className='skills__bar skills__angular' />
-            </div>
-          </div>
+                            <span className='skills__number'>80%</span>
+                            <span className='skills__bar skills__styles'/>
+                        </div>
+                        <div className='skills__data'>
+                            <span className='skills__name'>React</span>
+                            <span className='skills__number'>70%</span>
+                            <span className='skills__bar skills__react'/>
+                        </div>
+                        <div className='skills__data'>
+                            <span className='skills__name'>Angular</span>
+                            <span className='skills__number'>80%</span>
+                            <span className='skills__bar skills__angular'/>
+                        </div>
+                    </div>
 
-          <div className='skills__content'>
-            <h3 className='skills__subtitle'>Backend</h3>
+                    <div className='skills__content'>
+                        <h3 className='skills__subtitle'>Backend</h3>
 
-            <div className='skills__data'>
-              <span className='skills__name'>Node</span>
-              <span className='skills__number'>80%</span>
-              <span className='skills__bar skills__node' />
-            </div>
-            <div className='skills__data'>
-              <span className='skills__name'>SQL & NoSQL</span>
-              <span className='skills__number'>65%</span>
-              <span className='skills__bar skills__db' />
-            </div>
-            <div className='skills__data'>
-              <span className='skills__name'>NestJS & NextJS</span>
-              <span className='skills__number'>85%</span>
-              <span className='skills__bar skills__frameworks' />
-            </div>
-            <div className='skills__data'>
+                        <div className='skills__data'>
+                            <span className='skills__name'>Node</span>
+                            <span className='skills__number'>80%</span>
+                            <span className='skills__bar skills__node'/>
+                        </div>
+                        <div className='skills__data'>
+                            <span className='skills__name'>SQL & NoSQL</span>
+                            <span className='skills__number'>65%</span>
+                            <span className='skills__bar skills__db'/>
+                        </div>
+                        <div className='skills__data'>
+                            <span className='skills__name'>NestJS & NextJS</span>
+                            <span className='skills__number'>85%</span>
+                            <span className='skills__bar skills__frameworks'/>
+                        </div>
+                        <div className='skills__data'>
               <span className='skills__name'>
                 Outras bibliotecas (Knex, Express, Axios...)
               </span>
-              <span className='skills__number'>80%</span>
-              <span className='skills__bar skills__others' />
-            </div>
-          </div>
-        </div>
-      </Skill>
-    </>
-  )
+                            <span className='skills__number'>80%</span>
+                            <span className='skills__bar skills__others'/>
+                        </div>
+                    </div>
+                </div>
+            </Skill>
+        </>
+    )
 }

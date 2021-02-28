@@ -68,7 +68,8 @@ export default function ProjectsComponent() {
                         <img src={work1} alt=""/>
 
                         <div className="works__data">
-                            <ExternalLink target="_blank" className="works__link" href="https://github.com/kvitravn/FATEC">
+                            <ExternalLink target="_blank" className="works__link"
+                                          href="https://github.com/kvitravn/FATEC">
                                 <i className='bx bx-link'/>
                             </ExternalLink>
                             <span className="works__title">FATEC Guarulhos</span>
@@ -79,7 +80,8 @@ export default function ProjectsComponent() {
                         <img src={work2} alt=""/>
 
                         <div className="works__data">
-                            <ExternalLink target="_blank" className="works__link" href="https://github.com/kvitravn/NLWOmnistack-2">
+                            <ExternalLink target="_blank" className="works__link"
+                                          href="https://github.com/kvitravn/NLWOmnistack-2">
                                 <i className='bx bx-link'/>
                             </ExternalLink>
                             <span className="works__title">Proffy</span>

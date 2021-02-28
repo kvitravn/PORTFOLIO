@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import React, {useEffect} from 'react'
+import {BrowserRouter} from 'react-router-dom'
 
 import NavMenuScripts from '../js/navMenuScripts'
 
@@ -85,76 +85,76 @@ const Nav = styled.nav`
 `
 
 export default function HeaderComponent() {
-  useEffect(() => {
-    const script = document.createElement('script')
+    useEffect(() => {
+        const script = document.createElement('script')
 
-    script.src = NavMenuScripts(
-      'nav-menu',
-      'nav-toggle',
-      'nav-close',
-      '.nav__link'
+        script.src = NavMenuScripts(
+            'nav-menu',
+            'nav-toggle',
+            'nav-close',
+            '.nav__link'
+        )
+        script.async = true
+
+        document.body.appendChild(script)
+
+        return () => {
+            document.body.removeChild(script)
+        }
+    }, [])
+
+    return (
+        <>
+            <BrowserRouter>
+                <Header>
+                    <div className='l-header' onLoad={useEffect}>
+                        <Nav className='nav bd-grid'>
+                            <div className='nav__toggle' id='nav-toggle'>
+                                <i className='bx bx-menu'></i>
+                            </div>
+
+                            <div className='nav__menu' id='nav-menu'>
+                                <div className='nav__close' id='nav-close'>
+                                    <i className='bx bx-x'></i>
+                                </div>
+
+                                <ul className='nav__list'>
+                                    <li className='nav__item'>
+                                        <a href='#home' className='nav__link'>
+                                            Início
+                                        </a>
+                                    </li>
+                                    <li className='nav__item'>
+                                        <a href='#about' className='nav__link'>
+                                            Quem sou eu
+                                        </a>
+                                    </li>
+                                    <li className='nav__item'>
+                                        <a href='#skills' className='nav__link'>
+                                            Stack
+                                        </a>
+                                    </li>
+                                    <li className='nav__item'>
+                                        <a href='#education' className='nav__link'>
+                                            Formação
+                                        </a>
+                                    </li>
+                                    <li className='nav__item'>
+                                        <a href='#works' className='nav__link'>
+                                            Projetos
+                                        </a>
+                                    </li>
+                                    <li className='nav__item'>
+                                        <a href='#contact' className='nav__link'>
+                                            Contato
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </Nav>
+                    </div>
+                </Header>
+            </BrowserRouter>
+        </>
     )
-    script.async = true
-
-    document.body.appendChild(script)
-
-    return () => {
-      document.body.removeChild(script)
-    }
-  }, [])
-
-  return (
-    <>
-      <BrowserRouter>
-        <Header>
-          <div className='l-header' onLoad={useEffect}>
-            <Nav className='nav bd-grid'>
-              <div className='nav__toggle' id='nav-toggle'>
-                <i className='bx bx-menu'></i>
-              </div>
-
-              <div className='nav__menu' id='nav-menu'>
-                <div className='nav__close' id='nav-close'>
-                  <i className='bx bx-x'></i>
-                </div>
-
-                <ul className='nav__list'>
-                  <li className='nav__item'>
-                    <a href='#home' className='nav__link'>
-                      Início
-                    </a>
-                  </li>
-                  <li className='nav__item'>
-                    <a href='#about' className='nav__link'>
-                      Quem sou eu
-                    </a>
-                  </li>
-                  <li className='nav__item'>
-                    <a href='#skills' className='nav__link'>
-                      Stack
-                    </a>
-                  </li>
-                  <li className='nav__item'>
-                    <a href='#education' className='nav__link'>
-                      Formação
-                    </a>
-                  </li>
-                  <li className='nav__item'>
-                    <a href='#works' className='nav__link'>
-                      Projetos
-                    </a>
-                  </li>
-                  <li className='nav__item'>
-                    <a href='#contact' className='nav__link'>
-                      Contato
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </Nav>
-          </div>
-        </Header>
-      </BrowserRouter>
-    </>
-  )
 }
