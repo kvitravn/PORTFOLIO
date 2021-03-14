@@ -117,74 +117,74 @@ const GlobalStyle = createGlobalStyle`
     .nav__menu {
       width: var(--nav-width) !important;
     }
-    
+
     .about__container, .skills__container, .works__container, .contact__container, .contact__inputs {
       grid-template-columns: repeat(2, 1fr) !important;
     }
-    
+
     .about__data {
       text-align: initial !important;
     }
-    
+
     .about__description {
       margin-bottom: var(--mb-5) !important;
     }
-    
+
     .about__img {
       width: 220px !important;
     }
-    
+
     .about__information {
       padding-left: 4rem !important;
     }
-    
+
     .education__time {
       padding: 0 2rem !important;
     }
-    
+
     .contact__inputs {
       display: grid !important;
       column-gap: 1rem !important;
     }
-    
+
     .contact__info {
       padding-left: 3rem !important;
     }
-    
+
     .footer {
       background: none !important;
     }
-    
+
     .footer {
       background-color: var(--first-color) !important;
       padding: 3rem 0 !important;
       border-radius: 0.5rem !important;
     }
   }
-  
-  @media screen and (min-width: 1024px){
+
+  @media screen and (min-width: 1024px) {
     body {
       margin: 0 !important;
       padding-left: var(--nav-width) !important;
       align-items: center;
     }
-    
+
     .l-header {
       width: 0 !important;
     }
-    
+
     .nav__toggle, .nav__logo, .nav__close {
       display: none !important;
     }
-    
+
     .nav__menu {
       left: 0 !important;
     }
-    
+
     .home__container {
       height: 100vh !important;
     }
-    
+
     #about, #education, #footer {
       margin: 0 1rem;
     }
@@ -192,7 +192,7 @@ const GlobalStyle = createGlobalStyle`
     .section {
       padding: 3rem 0 2rem !important;
     }
-    
+
     .bd-grid {
       margin-left: auto !important;
       margin-right: auto !important;
@@ -221,10 +221,6 @@ const Section = styled.div`
     margin-bottom: 0.25rem;
   }
 `
-
-const toTop = () => {
-    document.documentElement.scrollTop = 0
-}
 
 export default function App() {
     useEffect(() => {
