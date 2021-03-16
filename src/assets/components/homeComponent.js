@@ -5,7 +5,7 @@ import {ExternalLink} from "react-external-link";
 import styled from "styled-components";
 
 import profile from "../img/profile.png";
-import cv from "../img/cv/cv.pdf";
+import cv from "../img/cv/gtoledo.pdf";
 
 const Home = styled.section`
   .home__container {
