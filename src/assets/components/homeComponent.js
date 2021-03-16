@@ -1,11 +1,11 @@
 import React from 'react'
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom'
 
-import {ExternalLink} from "react-external-link";
-import styled from "styled-components";
+import { ExternalLink } from 'react-external-link'
+import styled from 'styled-components'
 
-import profile from "../img/profile.png";
-import cv from "../img/cv/gtoledo.pdf";
+import profile from '../img/profile.png'
+import gtoledo from '../img/cv/gtoledo.pdf'
 
 const Home = styled.section`
   .home__container {
@@ -49,7 +49,7 @@ const Home = styled.section`
     color: var(--first-color-dark);
     text-align: center;
     font-weight: var(--font-bold);
-    margin-bottom: .25rem;;
+    margin-bottom: 0.25rem;
   }
 
   .home__social {
@@ -92,41 +92,60 @@ const Home = styled.section`
 `
 
 export default function HomeComponent() {
-    return (
-        <>
-            <Home className="home" id="home">
-                <div className="home__container bd-grid">
-                    <div className="home__data">
-                        <div className="home__img">
-                            <img src={profile} alt="Kvitravn"/>
-                        </div>
+  return (
+    <>
+      <Home className='home' id='home'>
+        <div className='home__container bd-grid'>
+          <div className='home__data'>
+            <div className='home__img'>
+              <img src={profile} alt='Kvitravn' />
+            </div>
 
-                        <h1 className="home__title">
-                            Kvitravn
-                        </h1>
-                        <span className="home__profession">Software Developer</span>
+            <h1 className='home__title'>Kvitravn</h1>
+            <span className='home__profession'>Software Developer</span>
 
-                        <div className="home__social">
-                            <ExternalLink href="https://www.linkedin.com/in/gustaf-toledo/"
-                                          className="home__social-link" target="_blank"><i
-                                className='bx bxl-linkedin'/></ExternalLink>
-                            <ExternalLink href="https://github.com/kvitravn" className="home__social-link"
-                                          target="_blank"><i
-                                className='bx bxl-github'/></ExternalLink>
-                            <ExternalLink href="https://twitter.com/GusttaToledo"
-                                          className="home__social-link"
-                                          target="_blank"><i
-                                className='bx bxl-twitter'/></ExternalLink>
-                            <ExternalLink href="https://www.instagram.com/gustaftoledo/?hl=pt-br"
-                                          className="home__social-link" target="_blank"><i
-                                className='bx bxl-instagram'/></ExternalLink>
-                        </div>
+            <div className='home__social'>
+              <ExternalLink
+                href='https://www.linkedin.com/in/gustaf-toledo/'
+                className='home__social-link'
+                target='_blank'
+              >
+                <i className='bx bxl-linkedin' />
+              </ExternalLink>
+              <ExternalLink
+                href='https://github.com/kvitravn'
+                className='home__social-link'
+                target='_blank'
+              >
+                <i className='bx bxl-github' />
+              </ExternalLink>
+              <ExternalLink
+                href='https://twitter.com/GusttaToledo'
+                className='home__social-link'
+                target='_blank'
+              >
+                <i className='bx bxl-twitter' />
+              </ExternalLink>
+              <ExternalLink
+                href='https://www.instagram.com/gustaftoledo/?hl=pt-br'
+                className='home__social-link'
+                target='_blank'
+              >
+                <i className='bx bxl-instagram' />
+              </ExternalLink>
+            </div>
 
-                        <Link className="button home__button" to={cv} target="_blank"
-                              download>Download CV</Link>
-                    </div>
-                </div>
-            </Home>
-        </>
-    )
+            <Link
+              className='button home__button'
+              to={gtoledo}
+              target='_blank'
+              download
+            >
+              Download CV
+            </Link>
+          </div>
+        </div>
+      </Home>
+    </>
+  )
 }
